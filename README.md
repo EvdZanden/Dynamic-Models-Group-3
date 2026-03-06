@@ -15,7 +15,7 @@ The model contains the following parameters (also described in the code):
 
 **d2** = per capita death rate of the lynxes
 ## Scenarios
-The assignment asked us to change the parameter values for three different scenarios. These files can be found in the repo as MATLAB files under the names ScenarioX:
+The assignment asked us to change the parameter values for three different scenarios. These files can be found in the repo as MATLAB files under the names Scenario_X:
 
 **Scenario 1:** The system exhibits stable oscillations with a periodicity of approximately 70 months;
 
