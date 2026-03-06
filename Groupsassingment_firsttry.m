@@ -5,12 +5,12 @@ t0 = 0;                 	% start time of simulation [in months]
 tfinal = 90;                % end time of simulation [in months]
 y0 = [3 0.5 ];               % initial state i.e. number of tuna and sharks at t=0
 tspan = [t0 tfinal];        % time span defined by the start and end times of the simulation [in months]
-a1 = 5;
-a2 = 0.1;
-b1 = 3;
-b2 = 2;
-d1 = 0.4;
-d2 = 0.01;
+a1 = 5;                    %maximum consumption rate of plants
+a2 = 0.1;                    %maximum consumption rate of hare
+b1 = 3;                      %strength of saturation of hare
+b2 = 2;                      %strength of saturation of lynx
+d1 = 0.4;                      %per capita death rate hare
+d2 = 0.01;                      %per capita death rate lynx
 
 
 [t,y] = ode23(@(t,y) plants_hare_lynx(t,y,a1,a2,b1,b2,d1,d2), tspan, y0);
@@ -32,4 +32,5 @@ xlabel('Plants Population')
 ylabel('Hare Population')
 
 zlabel('Lynx Population')
+
 
