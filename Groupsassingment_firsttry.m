@@ -12,9 +12,6 @@ b2 = 2;
 d1 = 0.4;
 d2 = 0.01;
 
-% The system of ordindary differential equations for sharks and tuna are
-% solved numerically by taking tiny steps forward in time and estimating
-% the solution.
 
 [t,y] = ode23(@(t,y) plants_hare_lynx(t,y,a1,a2,b1,b2,d1,d2), tspan, y0);
 
@@ -35,3 +32,4 @@ xlabel('Plants Population')
 ylabel('Hare Population')
 
 zlabel('Lynx Population')
+
