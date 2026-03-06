@@ -1,9 +1,9 @@
 %% Scenario 2: The lynx population goes extinct (population very close to zero) after a year, and plants and hares stabilize within 120 months
-
+%By increasing d (the death rate of lynx) we make the population go enxtinct
 
 t0 = 0;                 	% start time of simulation [in months]
 tfinal = 150;                % end time of simulation [in months]
-y0 = [1 0.5 0.1];               % initial state i.e. number of tuna and sharks at t=0
+y0 = [1 0.5 0.1];               % initial state, i. e. number of plants, hare and lynx
 tspan = [t0 tfinal];        % time span defined by the start and end times of the simulation [in months]
 a1 = 1;                    %maximum consumption rate of plants
 a2 = 0.1;                    %maximum consumption rate of hare
@@ -32,4 +32,5 @@ xlabel('Plants Population')
 ylabel('Hare Population')
 
 zlabel('Lynx Population')
+
 
