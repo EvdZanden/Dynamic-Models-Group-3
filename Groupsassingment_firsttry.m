@@ -5,12 +5,12 @@ t0 = 0;                 	% start time of simulation [in months]
 tfinal = 90;                % end time of simulation [in months]
 y0 = [3 0.5 ];               % initial state i.e. number of tuna and sharks at t=0
 tspan = [t0 tfinal];        % time span defined by the start and end times of the simulation [in months]
-a1 = ;
-a2 = ;
-b1 = ;
-b2 = ;
-d1 = ;
-d2 = ;
+a1 = 5;
+a2 = 0.1;
+b1 = 3;
+b2 = 2;
+d1 = 0.4;
+d2 = 0.01;
 
 % The system of ordindary differential equations for sharks and tuna are
 % solved numerically by taking tiny steps forward in time and estimating
@@ -29,8 +29,9 @@ legend('Plants','Hare','Lynx', 'Location','North')
 % Now, we are also going to plot the state space:
 % plotting the state space
 figure("Name",'State space')
-plot(y(:,1),y(:,2), y(:,3))
+plot3(y(:,1),y(:,2), y(:,3))
 title('State space')
 xlabel('Plants Population')
 ylabel('Hare Population')
+
 zlabel('Lynx Population')
