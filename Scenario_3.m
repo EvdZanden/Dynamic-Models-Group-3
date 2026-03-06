@@ -1,11 +1,13 @@
 %% Scenario 3: The system shows chaotic behavior, and the lynx population peaks twice within the 200-month period. 
-% What makes this behavior chaotic and not oscillating or random? 
-% Hint: Chaotic behavior is deterministic, sensitive to initial conditions, bounded, and irregular.
+% The initial conditions where taken from the book, changed d2 to make the lynx population peak twice during the 200 months period.
+% To prove that it is chaotic we showed that the system is sensitive to initial conditions by slightly changing d2 at plotting the two
+%systems against eachother. Additionally, we showed that it is deterministic by creating Poincaré plots for each species (xn vs xn+1 plots), since 
+%they had a distictive shape the system is deterministic. 
 
 
 t0 = 0;                 	% start time of simulation [in months]
 tfinal = 200;                % end time of simulation [in months]
-y0 = [0.75 0.15 8];               % initial state
+y0 = [0.75 0.15 8];               % initial state i.e. number of plants, hare and lynx at t0
 tspan = [t0 tfinal];        % time span defined by the start and end times of the simulation [in months]
 a1 = 5;                    %maximum consumption rate of plants
 a2 = 0.1;                    %maximum consumption rate of hare
@@ -105,4 +107,5 @@ plot(lynx_n, lynx_n1,'.')
 title('Lynx: x_n vs x_{n+1}')
 xlabel('x_n')
 ylabel('x_{n+1}')
+
 
